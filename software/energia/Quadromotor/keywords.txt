@@ -1,0 +1,26 @@
+#######################################
+# Syntax Coloring Map SPI
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Quadromotor	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+begin	KEYWORD2
+set_speed	KEYWORD2
+set_direction	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+FWD	LITERAL1
+BWD	LITERAL1
+M1	LITERAL1
+M2	LITERAL1
+M3	LITERAL1
+M4	LITERAL1
