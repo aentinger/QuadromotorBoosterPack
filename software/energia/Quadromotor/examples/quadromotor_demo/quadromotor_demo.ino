@@ -10,39 +10,47 @@
 void setup()
 {
   Quadromotor::begin();
-  
-  Quadromotor::set_direction(M1, FWD);
-  Quadromotor::set_direction(M2, BWD);
-  Quadromotor::set_direction(M3, FWD);
-  Quadromotor::set_direction(M4, BWD);
 }
-
-static uint8_t speed = 0;
-static boolean is_speed_increasing = true;
 
 void loop()
 {
-  Quadromotor::set_speed(M1, speed);
-  Quadromotor::set_speed(M2, speed);
-  Quadromotor::set_speed(M3, speed);
-  Quadromotor::set_speed(M4, speed);  
-  
-  if(is_speed_increasing)
+  // drive forward
+  Quadromotor::set_direction(M1, FWD);
+  Quadromotor::set_direction(M2, FWD);
+  Quadromotor::set_direction(M3, FWD);
+  Quadromotor::set_direction(M4, FWD); 
+  ramp_up();
+  ramp_down();
+
+  // drive backward
+  Quadromotor::set_direction(M1, BWD);
+  Quadromotor::set_direction(M2, BWD);
+  Quadromotor::set_direction(M3, BWD);
+  Quadromotor::set_direction(M4, BWD); 
+  ramp_up();
+  ramp_down();
+}
+
+void ramp_up()
+{
+  for(uint16_t speed = 0; speed < MAX_SPEED; speed+=50)
   {
-    speed += 10;
-    if(speed > 200)
-    {
-      is_speed_increasing = false;
-    }
+      Quadromotor::set_speed(M1, speed);
+    Quadromotor::set_speed(M2, speed);
+    Quadromotor::set_speed(M3, speed);
+    Quadromotor::set_speed(M4, speed);  
+    delay(100);
   }
-  else
+}
+
+void ramp_down()
+{
+  for(uint16_t speed = MAX_SPEED; speed > 100; speed-=50)
   {
-     speed -= 10;
-     if(speed < 20)
-     {
-      is_speed_increasing = true; 
-     }
+    Quadromotor::set_speed(M1, speed);
+    Quadromotor::set_speed(M2, speed);
+    Quadromotor::set_speed(M3, speed);
+    Quadromotor::set_speed(M4, speed);  
+    delay(100);
   }
-  
-  delay(100);
 }

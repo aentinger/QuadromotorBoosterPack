@@ -14,28 +14,14 @@
 
 #include <stdint.h>
 
-/* DEFINES */
+/* CONSTANTS */
 
-#define LXR_FOUR_SINGLE_MOTORS
-//#define LXR_TWO_DUAL_MOTORS
-//#define LXR_ONE_SINGLE_MOTOR
-
-#if !defined(LXR_FOUR_SINGLE_MOTORS) && !defined(LXR_TWO_DUAL_MOTORS) && !defined(LXR_ONE_SINGLE_MOTOR)
-#error "Select at least one configuration"
-#endif
+static volatile uint16_t const MAX_SPEED = 1000;
 
 /* TYPEDEFS */
 
 typedef enum {FWD, BWD} E_DIRECTION;
-#ifdef LXR_FOUR_SINGLE_MOTORS
 typedef enum {M1, M2, M3, M4} E_MOTOR;
-#endif
-#ifdef LXR_TWO_DUAL_MOTORS
-typedef enum {M1, M2} E_MOTOR;
-#endif
-#ifdef LXR_ONE_SINGLE_MOTOR
-typedef enum {M1} E_MOTOR;
-#endif
 
 /* PROTOTYPES */
 
