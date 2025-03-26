@@ -1,13 +1,14 @@
-LXRobotics P7 Quadromotor BoosterPack
-=====================================
+<a href="https://lxrobotics.com/"><img align="right" src="https://assets.lxrobotics.com/logo-old/lxrobotics.png" width="15%"></a>
+💾 Quadromotor BoosterPack
+==========================
 
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-# Image
+# 📸 Image
 
-![LXRobotics P7 Quadromotor BoosterPack](https://raw.githubusercontent.com/lxrobotics/QuadromotorBoosterPack/master/images/quadromotor-booster-pack-side-small.jpg)
+![LXRobotics P7 Quadromotor BoosterPack](images/quadromotor-booster-pack-side-small.jpg)
 
-# Description
+# 📂 Description
 
 The Quadromotor BoosterPack in combination with a MSP430 Launchpad facilitates the control of a 1, 2 or 4 DC motors, or alternatively  of 2 stepper motors. Additionally, outputs of the motor drivers can be connected in parallel. Therefor, two motors with an maximum output current of 2 A can be controlled, or one motor with an maximum output current of 4 A. For a quick and easy start a sample Code Composer Studio project (written in programming language C) is available.
 
@@ -21,8 +22,4 @@ The Quadromotor BoosterPack in combination with a MSP430 Launchpad facilitates t
 * To be used with MSP430 Launchpad
 * Sample projects available for Code Composer Studio
 
-# Videos
-
-[![VIDEO1](http://img.youtube.com/vi/x70kx4m9WF8/0.jpg)](https://www.youtube.com/watch?v=x70kx4m9WF8 "LXRobotics Quadromotor BoosterPack")
-
-[![VIDEO2](http://img.youtube.com/vi/Ax52dqauwFk/0.jpg)](https://www.youtube.com/watch?v=Ax52dqauwFk "LXRobotics Quadromotor BoosterPack")
+# 🎥 [Video](images/quadromotor_booster_pack_demo.mp4)
